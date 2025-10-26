@@ -1,0 +1,221 @@
+
+
+
+        :root {
+            --primary: #0866ff;
+            --primary-dark: #1877f2;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --danger: #dc3545;
+            --muted: #6c757d;
+            --border-color: #dee2e6;
+            --bg-card: #ffffff;
+            --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            --radius: 12px;
+        }
+
+        body {
+            font-family: 'Ancizar Serif', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            font-size: 16px;
+        }
+
+        .container {
+            padding: 50px 0;
+        }
+
+        .mainTitle {
+            font-weight: 700;
+            color: var(--dark);
+            font-size: 2.25rem;
+            margin-bottom: 30px;
+        }
+
+        .breadcrumb {
+            background: transparent;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .appointment-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 35px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .appointment-card h5 {
+            font-weight: 600;
+            margin-bottom: 25px;
+            font-size: 1.25rem;
+        }
+
+        form label {
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--dark);
+            font-size: 20px;
+        }
+
+        .form-control, .form-select {
+            border-radius: var(--radius);
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.15rem rgba(32, 201, 151, 0.25);
+        }
+
+        .form-select:disabled, .form-control:disabled {
+            background-color: #e9ecef;
+        }
+
+        .btn-submit {
+            background: var(--primary);
+            color: #fff;
+            padding: 14px 32px;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(32, 201, 151, 0.3);
+        }
+
+        .btn-submit:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(23, 165, 137, 0.4);
+        }
+
+        .time-note {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-top: 5px;
+        }
+
+        .alert {
+            border-radius: var(--radius);
+            padding: 12px 16px;
+            font-weight: 500;
+        }
+
+        .is-invalid {
+            border-color: var(--danger) !important;
+            box-shadow: 0 0 0 0.15rem rgba(220, 53, 69, 0.25) !important;
+        }
+
+        .logout-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #ff7675, #d63031);
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 10px;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            z-index: 1100;
+        }
+
+        .logout-btn:hover {
+            background: linear-gradient(135deg, #d63031, #ff7675);
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .appointment-card {
+                padding: 25px;
+            }
+
+            .mainTitle {
+                font-size: 1.75rem;
+            }
+        }
+        .selectable-date {
+            cursor: pointer !important;
+        }
+        .text-muted {
+            color: #adb5bd !important;
+        }
+        /* Professional Datepicker Styling */
+        .professional-datepicker {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            background: white;
+        }
+
+        .datepicker table {
+            width: 100%;
+        }
+
+        .datepicker table tr td, 
+        .datepicker table tr th {
+            text-align: center;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        .datepicker table tr td.day:hover {
+            background: #f0f0f0;
+        }
+
+        .datepicker table tr td.available-date {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .datepicker table tr td.available-date:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .datepicker table tr td.active {
+            background: var(--primary) !important;
+            color: white !important;
+        }
+
+        .datepicker table tr td.today-date {
+            color: #6c757d;
+            font-weight: normal;
+        }
+
+        .datepicker table tr td.date-disabled,
+        .datepicker table tr td.sunday-date {
+            color: #adb5bd !important;
+            text-decoration: line-through;
+        }
+
+        .datepicker .datepicker-switch {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .datepicker .prev, 
+        .datepicker .next {
+            color: var(--primary);
+        }
+
+        .datepicker .dow {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .datepicker .datepicker-days {
+            padding: 5px;
+        }
+
+    
